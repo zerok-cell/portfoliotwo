@@ -1,31 +1,36 @@
 'use client'
 
-import {Avatar, Button, Flex, Text, Title} from "@mantine/core";
+import {Avatar, Button, Flex,Title} from "@mantine/core";
 import {chakra} from "@/public/fonts";
-import avatar from '@/public/avatar_zerok.webp'
-import Image from 'next/image'
 import {IconBrandGithub} from "@tabler/icons-react";
 
-const Github = () =>(
-    <Flex gap="md" direction="column">
+const Github = () => {
 
-        <Image width={150} style={{
-            borderRadius: "50%",
-            border:"3px white solid",
-        }} src={avatar} alt="My github avatar"/>
-        <Button variant="outline"> <IconBrandGithub/> My github</Button>
-    </Flex>
-)
+    return (
+        <Flex gap="md" direction="column">
+
+            <Avatar   size="150" src="https://avatars.githubusercontent.com/u/89585170?v=4" style={{
+                border: "3px solid",
+                borderColor: "grey",
+            }}/>
+            {/*<Image width={150} style={{*/}
+            {/*    borderRadius: "50%",*/}
+            {/*    border: "3px #D0D5DB solid",*/}
+            {/*}} src={avatar} alt="My github avatar"/>*/}
+            <Button c="gray" variant="default"> <IconBrandGithub/> My github</Button>
+        </Flex>
+    )
+}
 
 const WelcomeCenter = () => {
     return (
         <>
 
-        <Flex bg="black" gap="lg" justify="center"
+        <Flex  gap="lg" justify="center"
                     align="center"
                     direction="row"
                     wrap="wrap">
-            <Title  c='white' className={`${chakra.className}`} >Welcome to my portfolio</Title>
+            <Title  className={`${chakra.className}`} >Welcome to my portfolio</Title>
             <Github/>
         </Flex>
         </>

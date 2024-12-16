@@ -7,7 +7,7 @@ import {generateColors} from "@mantine/colors-generator";
 export const theme = createTheme({
     fontFamily:chakra.className,
 
-    primaryColor:'white',
+    primaryColor:'gray',
 
     colors:{
         white:generateColors('#ffffff'),
