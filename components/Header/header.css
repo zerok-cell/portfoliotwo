@@ -1,0 +1,21 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
+  height: 4rem;
+  transition: 1s ease all;
+  width: 0%;
+  border-bottom: rgba(255, 255, 255, 0.22) 1px solid;
+}
+#header a {
+  color: white;
+  text-decoration: none;
+}
+#header a, #header .icon {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=header.css.map */
