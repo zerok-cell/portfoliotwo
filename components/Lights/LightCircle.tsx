@@ -1,26 +1,9 @@
 "use client"
 import './light.scss'
 import {CSSProperties} from "react";
-import {motion, Target, TargetAndTransition, Transition} from "motion/react";
+import {motion, Transition} from "motion/react";
 
-
-interface AnimationProps{
-    initial:Target,
-    animate:TargetAndTransition
-    time?:number,
-}
-
-interface LightCircleProps {
-    w?:string|number,
-    h?:string|number,
-    c?:string,
-    opc?:string|number,
-    blur?:string,
-    z?:number
-    anim?:AnimationProps | undefined
-
-}
-
+import {LightCircleProps} from "@/types/types";
 
 
 
@@ -29,7 +12,7 @@ const LightCircle = ({w,h,c,opc,blur,z, anim}:LightCircleProps) => {
 
 
     const style:CSSProperties = {
-        width:w||'100px',
+        width:w==='max'? '100%': w ||'100px',
         height:h||'100px',
         userSelect:"none",
         opacity: opc || 0.5,
