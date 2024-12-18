@@ -11,11 +11,20 @@
   border-bottom: rgba(255, 255, 255, 0.22) 1px solid;
 }
 #header a {
+  transition: 0.2s ease all;
   color: white;
   text-decoration: none;
 }
+#header .archer-link:hover {
+  font-size: 18px;
+}
 #header a, #header .icon {
   opacity: 0;
+}
+
+body, html {
+  background: black;
+  overflow-x: clip;
 }
 
 /*# sourceMappingURL=header.css.map */

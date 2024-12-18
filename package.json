@@ -24,6 +24,7 @@
     "@mantine/core": "7.15.1",
     "@mantine/hooks": "7.15.1",
     "@next/bundle-analyzer": "^14.2.4",
+    "@svgr/webpack": "^8.1.0",
     "@tabler/icons": "^3.26.0",
     "@tabler/icons-react": "^3.6.0",
     "chroma-js": "^3.1.2",

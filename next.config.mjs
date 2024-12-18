@@ -10,6 +10,15 @@ export default withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   experimental: {
+    turbo:{
+      moduleIdStrategy: 'deterministic',
+      rules:{
+        ".svg":{
+          loaders:['@svgr/webpack'],
+          as:"*.js"
+        }
+      }
+    },
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
 });

@@ -1,6 +1,7 @@
 import {Target, TargetAndTransition} from "motion/react";
+import {CSSProperties, LegacyRef} from "react";
 
-interface AnimationProps{
+export interface AnimationPropsCustom{
     initial:Target,
     animate:TargetAndTransition
     time?:number,
@@ -14,7 +15,9 @@ export interface LightCircleProps {
     opc?:string|number,
     blur?:string,
     z?:number,
-    anim?:AnimationProps | undefined
+    anim?:AnimationPropsCustom | undefined
+    styles?:CSSProperties
+    ref?:LegacyRef<HTMLDivElement>
 
 }
 
