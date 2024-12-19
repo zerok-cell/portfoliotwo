@@ -1,8 +1,7 @@
 "use client"
-import './light.scss'
-import {CSSProperties, useEffect} from "react";
-import {motion, Transition, useAnimate} from "motion/react";
-
+import {CSSProperties} from "react";
+import {Transition, LazyMotion, domAnimation} from "motion/react";
+import * as m from "motion/react-m"
 import {LightCircleProps} from "@/types/types";
 import {useViewportSize} from "@mantine/hooks";
 
@@ -33,11 +32,13 @@ const LightCircle = ({w,h,c,opc,blur,z, anim, styles,ref}:LightCircleProps) => {
 
     }
     return (
-        <motion.div ref={ref}
+        <LazyMotion features={domAnimation}>
+            <m.div ref={ref}
 
-            animate={anim?.animate}
-                    transition={transition}
-                    initial={anim?.initial} style={style} />
+                   animate={anim?.animate}
+                   transition={transition}
+                   initial={anim?.initial} style={style}/>
+        </LazyMotion>
     )
 }
 

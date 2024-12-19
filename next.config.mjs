@@ -16,6 +16,10 @@ export default withBundleAnalyzer({
         ".svg":{
           loaders:['@svgr/webpack'],
           as:"*.js"
+        },
+        ".scss":{
+          loaders:['sass-loader'],
+          as:'*.css'
         }
       }
     },

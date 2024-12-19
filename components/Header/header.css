@@ -4,11 +4,13 @@
   left: 0;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 10;
+  z-index: 1;
   height: 4rem;
   transition: 1s ease all;
-  width: 0%;
-  border-bottom: rgba(255, 255, 255, 0.22) 1px solid;
+  width: 100%;
+  border-bottom: rgba(255, 255, 255, 0.22) solid;
+  border-width: 0;
+  border-bottom-width: 1rem;
 }
 #header a {
   transition: 0.2s ease all;
@@ -23,8 +25,29 @@
 }
 
 body, html {
-  background: black;
+  background-color: black;
   overflow-x: clip;
+}
+
+main {
+  filter: brightness(1);
+}
+
+main::before {
+  transition: 1s ease all;
+  animation: ease-in backAnim infinite 10s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../public/black-hole.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.02) sepia(0.6);
+  z-index: -1;
 }
 
 /*# sourceMappingURL=header.css.map */

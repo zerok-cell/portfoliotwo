@@ -7,12 +7,12 @@ import {generateColors} from "@mantine/colors-generator";
 export const theme = createTheme({
     fontFamily:chakra.className,
 
-    primaryColor:'blueOxide',
+    primaryColor:'gray',
 
     colors:{
         whiteMy:generateColors('#ffffff'),
         greenPastel:generateColors('#30B089'),
-        blueOxide:generateColors('#2075C4')
+        blueOxide:generateColors('#6567FF')
 
     },
 });

@@ -1,0 +1,9 @@
+:root {
+  --color-blue: #802bff ;
+}
+
+.light-block {
+  box-shadow: 1px -33px 100rem rgba(128, 128, 128, 0.1);
+}
+
+/*# sourceMappingURL=global.css.map */
