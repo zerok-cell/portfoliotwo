@@ -35,7 +35,7 @@ import ChildrenStyles from "@/components/utils/ChildrenStyles";
 
     return (
         <LazyMotion  features={domAnimation}>
-            <m.div id={'about-me '}  data-testid="light-block" ref={scope} style={{
+            <m.div id="about-me "  data-testid="light-block" ref={scope} style={{
                 width: '80%',
                 borderRadius: '5px',
                 border: "2px solid gray",

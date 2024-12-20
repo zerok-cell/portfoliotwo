@@ -15,7 +15,7 @@ import table from "@/components/adaptiveTable";
 const Header = () => {
     const [scope, animate] = useAnimate()
     const [cssLoad, setCssLoad] = useState(false)
-    const {height, width} = useViewportSize();
+    const {width} = useViewportSize();
     useEffect(() => {
         import('./header.scss').then(()=> {
             setCssLoad(true)

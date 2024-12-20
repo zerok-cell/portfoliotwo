@@ -35,7 +35,7 @@ const Github = () => {
 const WelcomeCenter =  () => {
     const [scope, animate]=useAnimateMini()
     const os = useOs()
-    const dataOs:Record<OS, React.JSX.Element> = {
+    const dataOs:Record<OS, JSX.Element> = {
         android:<IconBrandAndroid color="#47ff2b"/>,
         linux:<IconBrandUbuntu color="#ff832b"/>,
         windows:<IconBrandWindows color="#2b5cff"/>,

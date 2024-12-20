@@ -19,7 +19,7 @@ const MyStackMain = () => {
             <Flex  wrap="wrap" gap={20}  justify="center" align="center" w="100%">
                 {
                     dataStack.map((item, index) => (
-                        <CardMyStack data={item} index={index} key={index}/>
+                        <CardMyStack data={item}  key={index}/>
                     ))
                 }
             </Flex>

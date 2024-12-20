@@ -1,12 +1,11 @@
 'use client'
-import {Flex, Button, CopyButton, Text, ButtonProps, PolymorphicComponentProps} from "@mantine/core";
-import {useAnimateMini} from "motion/react";
-import {IconBrandTelegram, IconComet, IconMail, IconPhone, IconProps} from "@tabler/icons-react";
+import {Flex, Button, CopyButton, Text, } from "@mantine/core";
+import {IconBrandTelegram,  IconMail, IconPhone, } from "@tabler/icons-react";
 import logotype from "@/public/logotype.svg"
 import Image from "next/image";
-import {useInViewport, useViewportSize} from "@mantine/hooks";
+import { useViewportSize} from "@mantine/hooks";
 import adaptiveTable from "@/components/adaptiveTable";
-import {CSSProperties, FC, HTMLAttributes, ReactNode, useEffect} from "react";
+import {CSSProperties, FC,  ReactNode, } from "react";
 import {redirect} from "next/navigation";
 
 interface SocialLinks {
@@ -41,8 +40,7 @@ const ButtonSocial:FC<SocialLinks> = ({hintText,displayText,linkText, action,cop
 }
 
 const FooterMain = () => {
-const [scope, animate] = useAnimateMini()
-    const {width, height} = useViewportSize()
+    const {width} = useViewportSize()
 
 
     const data:SocialLinks[] = [

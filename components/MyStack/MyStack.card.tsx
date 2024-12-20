@@ -6,12 +6,12 @@ import Image from "next/image";
 import * as m from "motion/react-m"
 import {StaticImport} from "next/dist/shared/lib/get-img-props";
 import {chakra} from "@/public/fonts";
-import {domAnimation, LazyMotion, useAnimate, useAnimateMini} from "motion/react";
+import {domAnimation, LazyMotion, useAnimate} from "motion/react";
 
-const CardMyStack = ({ data,index }: {data:ImagesTextData<StaticImport>, index:number}) => {
+const CardMyStack = ({ data }: {data:ImagesTextData<StaticImport>}) => {
   const [scope,animate] = useAnimate();
     const animateImage = ()=>{
-        console.log(Math.random()*0.3)
+
         animate(scope.current, {rotate: 360, scale:1},{duration:2, type:'spring'})
         animate(scope.current, {opacity: 1},)
 
