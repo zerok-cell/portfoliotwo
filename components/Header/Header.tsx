@@ -1,6 +1,6 @@
 'use client'
 
-import {Flex, Grid, Space} from "@mantine/core";
+import {Flex, Grid} from "@mantine/core";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import Image from "next/image"
@@ -26,17 +26,19 @@ const Header = () => {
     })
 
     const data = [
-        {src:'/', icon:<IconStar  className="icon"/>, text:"About me"},
-        {src:'/', icon:<IconStack2  className="icon"/>, text:"My stack"},
+        {src:'#about-me', icon:<IconStar  className="icon"/>, text:"About me"},
+        {src:'#my-stack', icon:<IconStack2  className="icon"/>, text:"My stack"},
         {src:'/', icon:<IconAddressBook className="icon"/>, text:"Contact"},
 
     ]
     return (
 
         cssLoad && (
-            <Grid  bg={'rgba(255,255,255,0)'} columns={12} id="header" ref={scope} justify="start" align="center">
+            <Grid  bg="rgba(255,255,255,0)" columns={12} id="header" ref={scope} justify="start" align="center">
                 <Grid.Col visibleFrom="sm" span="content">
                     <Image style={{height: "4rem", marginLeft: 20, }} width={40} src={logotype} alt="logotype"/>
+
+
                 </Grid.Col>
 
                 <Grid.Col span={{sm: 10, base: 11, md: 11}}>
@@ -45,7 +47,7 @@ const Header = () => {
 
                     }} color="white" ml="5%" justify="center" align='center'>
                         {data.map((item, index) => (
-                            <Flex gap={5}  key={index}>
+                            <Flex gap={5} key={index}>
                                 {width > table.xs && (
                                     <ChildrenStyles c="gray">
                                         {item.icon}

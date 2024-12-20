@@ -25,7 +25,7 @@ const Github = () => {
         <Flex gap="md" direction="column">
             <Image src={avatar} width={150} alt="My github avatar"  style={{
                 borderRadius:'50%',
-                border:"3px solid gray",
+                border:"3px solid var(--color-blue-pastel)",
             }}/>
             <Button bg="var(--color-blue)" onMouseUp={()=>redirect('https://github.com/zerok-cell')} className="light-button" variant="default"> <IconBrandGithub/> My github</Button>
         </Flex>
@@ -50,16 +50,16 @@ const WelcomeCenter =  () => {
     return (
         <>
 
-        <Flex opacity={0} ref={scope} columnGap={{base:0,sm:40}} gap={200} justify="center"
+        <Flex opacity={0} ref={scope} columnGap={{base:0,sm:80}} gap={900} justify="center"
                     align="center"
                     direction="row"
                     wrap="nowrap">
-            <Flex   gap={5}   direction="column" justify="center">
+            <Flex   gap={2}   direction="column" justify="center">
                 <Text >Shakhsinov Murad 💤</Text>
                 <Title  w={{base:'min-content', sm:"max-content"}} className={`${chakra.className} gradient`} >Welcome to my portfolio</Title>
-                <Flex mr={{base:20,sm:0}}  align="center" gap={5} direction="row">
+                <Flex wrap="nowrap" mr={{base:20,sm:0}} w="max-content"  align="center" gap={5} direction="row">
                     {dataOs[os]}
-                    <Text> Hello {os} user </Text>
+                    <Text > Hello {os} user </Text>
                 </Flex>
             </Flex>
             <Github/>

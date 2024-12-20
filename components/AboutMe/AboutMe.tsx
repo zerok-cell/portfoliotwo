@@ -1,15 +1,13 @@
-'use client'
+'use client';
 import {domAnimation, LazyMotion,useAnimateMini} from "motion/react"
 import * as m from 'motion/react-m'
 import {useEffect} from "react";
-import {Flex, Paper, Space, Text} from "@mantine/core";
+import {Flex,  Space, Text} from "@mantine/core";
 import {IconComet, IconHeart, IconStack2, IconUserUp} from "@tabler/icons-react";
-import {useViewportSize} from "@mantine/hooks";
 import ChildrenStyles from "@/components/utils/ChildrenStyles";
 
  const AboutMe =  () => {
     const [scope,animate]= useAnimateMini()
-    const {width, height} = useViewportSize();
      const data = [
          {
              icon:<IconComet/>,
@@ -36,21 +34,21 @@ import ChildrenStyles from "@/components/utils/ChildrenStyles";
 
 
     return (
-        <LazyMotion features={domAnimation}>
-            <m.div ref={scope} style={{
+        <LazyMotion  features={domAnimation}>
+            <m.div id={'about-me '}  data-testid="light-block" ref={scope} style={{
                 width: '80%',
                 borderRadius: '5px',
                 border: "2px solid gray",
                 padding:5,
                 opacity: 0,
                 background:'#090909'
-            }} className="light-block">
+            }} className="light-block noisy">
                 {data.map((item, index) => (
                     <Flex wrap="nowrap"  style={{borderRadius: 5}} p={5} key={index}
                           direction={{base: "column", xs: "row", sm: 'row'}} align={{base: 'center', sm: "center"}}
 
                     >
-                        <ChildrenStyles c="gray" p={5} rounded={5}>
+                        <ChildrenStyles  c="gray" p={5} rounded={5}>
                             {item.icon}
                         </ChildrenStyles>
                         <Space w={{base: '0', md: '20px', sm: "20px"}}/>
@@ -62,8 +60,6 @@ import ChildrenStyles from "@/components/utils/ChildrenStyles";
                     </Flex>
 
                 ))}
-
-
             </m.div>
 
         </LazyMotion>

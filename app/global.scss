@@ -1,5 +1,7 @@
 :root{
-  --color-blue: #802bff
+  --color-blue: #802bff;
+  --color-blue-pastel: #b683ff;
+  --darks-color:#090909;
 }
 
 
@@ -7,7 +9,47 @@
 
 .light-block{
 
-  box-shadow:  1px -33px 100rem rgba(128, 128, 128, 0.1);
+  box-shadow:  1px -33px 50rem rgba(128, 128, 128, 0.1);
 
 }
+
+
+body,html{
+  scroll-behavior: smooth;
+  background-color: black;
+
+  overflow-x: clip ;
+}
+
+main{
+
+  background-color: black;
+  filter: brightness(1);
+
+}
+
+
+
+
+main::before {
+
+  transition: 1s ease all;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../public/img-noise-361x370.png");
+
+  background-position: center;
+  filter: brightness(.5)  ;
+  z-index: -1;
+
+}
+
+.noisy {
+  background-image:  url("../public/img-noise-361x370.png") !important;
+}
+
 

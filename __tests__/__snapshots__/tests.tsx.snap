@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`about me renders 1`] = `
+<DocumentFragment>
+  <style
+    data-mantine-styles="classes"
+  >
+    @media (max-width: 35.99375em) {.mantine-visible-from-xs {display: none !important;}}@media (min-width: 36em) {.mantine-hidden-from-xs {display: none !important;}}@media (max-width: 47.99375em) {.mantine-visible-from-sm {display: none !important;}}@media (min-width: 48em) {.mantine-hidden-from-sm {display: none !important;}}@media (max-width: 61.99375em) {.mantine-visible-from-md {display: none !important;}}@media (min-width: 62em) {.mantine-hidden-from-md {display: none !important;}}@media (max-width: 74.99375em) {.mantine-visible-from-lg {display: none !important;}}@media (min-width: 75em) {.mantine-hidden-from-lg {display: none !important;}}@media (max-width: 87.99375em) {.mantine-visible-from-xl {display: none !important;}}@media (min-width: 88em) {.mantine-hidden-from-xl {display: none !important;}}
+  </style>
+  <div
+    class="light-block"
+    data-testid="light-block"
+    style="width: 80%; border-radius: 5px; border: 2px solid gray; padding: 5px; opacity: 1; background: rgb(9, 9, 9);"
+  >
+    <style
+      data-mantine-styles="inline"
+    >
+      .__m__-r0{align-items:center;flex-direction:column;}@media(min-width: 36em){.__m__-r0{flex-direction:row;}}@media(min-width: 48em){.__m__-r0{align-items:center;flex-direction:row;}}
+    </style>
+    <div
+      class="m_8bffd616 mantine-Flex-root __m__-r0"
+      style="border-radius: 5px; flex-wrap: nowrap;"
+    >
+      <div>
+        <svg
+          class="tabler-icon tabler-icon-comet "
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          style="width: auto; height: auto; background-color: transparent; border-radius: 5px; padding: 5px; color: gray;"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 18.5l-3 1.5l.5 -3.5l-2 -2l3 -.5l1.5 -3l1.5 3l3 .5l-2 2l.5 3.5z"
+          />
+          <path
+            d="M4 4l7 7"
+          />
+          <path
+            d="M9 4l3.5 3.5"
+          />
+          <path
+            d="M4 9l3.5 3.5"
+          />
+        </svg>
+      </div>
+      <style
+        data-mantine-styles="inline"
+      >
+        .__m__-r2{width:0rem;min-width:0rem;}@media(min-width: 48em){.__m__-r2{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}@media(min-width: 62em){.__m__-r2{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}
+      </style>
+      <div
+        class="__m__-r2"
+      />
+      <p
+        class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+      >
+        Hi! My name is Murad, I am 17 years old, and I am a Fullstack developer with a great interest in modern technologies and the creation of functional web applications.
+      </p>
+    </div>
+    <style
+      data-mantine-styles="inline"
+    >
+      .__m__-r4{align-items:center;flex-direction:column;}@media(min-width: 36em){.__m__-r4{flex-direction:row;}}@media(min-width: 48em){.__m__-r4{align-items:center;flex-direction:row;}}
+    </style>
+    <div
+      class="m_8bffd616 mantine-Flex-root __m__-r4"
+      style="border-radius: 5px; flex-wrap: nowrap;"
+    >
+      <div>
+        <svg
+          class="tabler-icon tabler-icon-stack-2 "
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          style="width: auto; height: auto; background-color: transparent; border-radius: 5px; padding: 5px; color: gray;"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 4l-8 4l8 4l8 -4l-8 -4"
+          />
+          <path
+            d="M4 12l8 4l8 -4"
+          />
+          <path
+            d="M4 16l8 4l8 -4"
+          />
+        </svg>
+      </div>
+      <style
+        data-mantine-styles="inline"
+      >
+        .__m__-r6{width:0rem;min-width:0rem;}@media(min-width: 48em){.__m__-r6{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}@media(min-width: 62em){.__m__-r6{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}
+      </style>
+      <div
+        class="__m__-r6"
+      />
+      <p
+        class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+      >
+        My stack includes React, Python, Next.js, TypeScript, and JavaScript. These tools allow me to create user-friendly, productive and aesthetic solutions for users.
+      </p>
+    </div>
+    <style
+      data-mantine-styles="inline"
+    >
+      .__m__-r8{align-items:center;flex-direction:column;}@media(min-width: 36em){.__m__-r8{flex-direction:row;}}@media(min-width: 48em){.__m__-r8{align-items:center;flex-direction:row;}}
+    </style>
+    <div
+      class="m_8bffd616 mantine-Flex-root __m__-r8"
+      style="border-radius: 5px; flex-wrap: nowrap;"
+    >
+      <div>
+        <svg
+          class="tabler-icon tabler-icon-heart "
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          style="width: auto; height: auto; background-color: transparent; border-radius: 5px; padding: 5px; color: gray;"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+          />
+        </svg>
+      </div>
+      <style
+        data-mantine-styles="inline"
+      >
+        .__m__-ra{width:0rem;min-width:0rem;}@media(min-width: 48em){.__m__-ra{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}@media(min-width: 62em){.__m__-ra{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}
+      </style>
+      <div
+        class="__m__-ra"
+      />
+      <p
+        class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+      >
+        I like to solve complex tasks, design application architecture and implement new technologies to achieve maximum results.
+      </p>
+    </div>
+    <style
+      data-mantine-styles="inline"
+    >
+      .__m__-rc{align-items:center;flex-direction:column;}@media(min-width: 36em){.__m__-rc{flex-direction:row;}}@media(min-width: 48em){.__m__-rc{align-items:center;flex-direction:row;}}
+    </style>
+    <div
+      class="m_8bffd616 mantine-Flex-root __m__-rc"
+      style="border-radius: 5px; flex-wrap: nowrap;"
+    >
+      <div>
+        <svg
+          class="tabler-icon tabler-icon-user-up "
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          style="width: auto; height: auto; background-color: transparent; border-radius: 5px; padding: 5px; color: gray;"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"
+          />
+          <path
+            d="M6 21v-2a4 4 0 0 1 4 -4h4"
+          />
+          <path
+            d="M19 22v-6"
+          />
+          <path
+            d="M22 19l-3 -3l-3 3"
+          />
+        </svg>
+      </div>
+      <style
+        data-mantine-styles="inline"
+      >
+        .__m__-re{width:0rem;min-width:0rem;}@media(min-width: 48em){.__m__-re{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}@media(min-width: 62em){.__m__-re{width:calc(1.25rem * var(--mantine-scale));min-width:calc(1.25rem * var(--mantine-scale));}}
+      </style>
+      <div
+        class="__m__-re"
+      />
+      <p
+        class="mantine-focus-auto m_b6d8b162 mantine-Text-root"
+      >
+        I always strive for professional growth and am open to interesting projects and cooperation. If you have any ideas or tasks that you want to implement, I will be glad to help!
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
