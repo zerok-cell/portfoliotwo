@@ -20,7 +20,7 @@ z-index: 30 !important;
 
 body,html{
   scroll-behavior: smooth;
-  background-color: black;
+  background-color: black !important;
   overflow-x: clip;
   height: max-content;
 }
@@ -36,7 +36,7 @@ body {
 
   scroll-behavior: smooth;
 
-  background-color: black;
+  background-color: black !important;
 
   overflow-x: clip;
 
