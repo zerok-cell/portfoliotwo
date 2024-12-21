@@ -1,5 +1,5 @@
 'use client'
-import WelcomeCenter from "@/components/Welcome/Welcome.center";
+import Welcome_center from "@/components/Welcome/__Center/Welcome_center";
 import {Center, Grid} from "@mantine/core";
 import LightCircle from "@/components/Lights/LightCircle";
 import AboutMe from "@/components/AboutMe/AboutMe";
@@ -18,7 +18,7 @@ const WelcomeMain = memo(() => {
                     }} initial={{opacity:0}} transition={{duration:2}}    />
                 </Grid.Col>
                 <Grid.Col span={12}>
-                    <WelcomeCenter/>
+                    <Welcome_center/>
                 </Grid.Col>
                 <Grid.Col  span={12}>
 
