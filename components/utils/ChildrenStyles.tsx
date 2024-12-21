@@ -1,4 +1,4 @@
-import {cloneElement, CSSProperties, ReactElement, ReactNode} from "react";
+import {cloneElement, CSSProperties, memo, ReactElement, ReactNode} from "react";
 
 interface PropsRezie{
     children: ReactElement;
@@ -13,34 +13,36 @@ interface PropsRezie{
 }
 type ChildrenStylesType = (props:PropsRezie)=>ReactNode
 
-const ChildrenStyles: ChildrenStylesType  = ({children, w,h,scale,style,bg,p,rounded,c}:PropsRezie) => {
-    const styleFromChildren:CSSProperties = {
-        width: w||"auto",
-        height: h|| 'auto',
-        backgroundColor:bg||'transparent',
-        scale:scale|| 1,
-        borderRadius:rounded||0,
-        padding:p||0,
-        color:c||'initial',
-        ...style
-    }
-
-
-    const styledChild =  cloneElement(children,{
-        style:{
-            ...styleFromChildren
+const ChildrenStyles: ChildrenStylesType  = memo(
+    ({children, w,h,scale,style,bg,p,rounded,c}:PropsRezie) => {
+        const styleFromChildren:CSSProperties = {
+            width: w||"auto",
+            height: h|| 'auto',
+            backgroundColor:bg||'transparent',
+            scale:scale|| 1,
+            borderRadius:rounded||0,
+            padding:p||0,
+            color:c||'initial',
+            ...style
         }
-    })
-    return (
-        <div style={{
-            width:'max-content',
-            height:'max-content'
-        }}>
-            {styledChild}
-        </div>
-    )
+
+
+        const styledChild =  cloneElement(children,{
+            style:{
+                ...styleFromChildren
+            }
+        })
+        return (
+            <div style={{
+                width:'max-content',
+                height:'max-content'
+            }}>
+                {styledChild}
+            </div>
+        )
 
 
 
-}
+    }
+)
 export default ChildrenStyles

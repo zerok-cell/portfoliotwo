@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-blue: #802bff;
   --color-blue-pastel: #b683ff;
@@ -9,36 +10,46 @@
 }
 
 footer {
-  background-color: black;
+  position: relative;
+  bottom: 0;
+  z-index: 30 !important;
 }
 
 body, html {
   scroll-behavior: smooth;
   background-color: black;
   overflow-x: clip;
+  height: max-content;
 }
 
-main {
+.noisy {
+  background-image: url("../public/img-noise-361x370.png") !important;
+}
+
+body {
+  position: relative; /* Добавлено */
+  scroll-behavior: smooth;
   background-color: black;
-  filter: brightness(1);
+  overflow-x: clip;
 }
 
-main::before {
-  transition: 1s ease all;
+body::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../public/img-noise-361x370.png");
-  background-position: center;
-  filter: brightness(0.5);
-  z-index: -1;
+  background-position: top;
+  z-index: 1; /* Убедитесь, что z-index меньше */
+  background-image: url("../public/img-noise-361x370.png") !important;
 }
 
-.noisy {
-  background-image: url("../public/img-noise-361x370.png") !important;
+main {
+  position: relative;
+  height: max-content;
+  z-index: 12; /* Убедитесь, что z-index больше */
+  filter: brightness(1);
 }
 
 /*# sourceMappingURL=global.css.map */

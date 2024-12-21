@@ -27,12 +27,12 @@ const ButtonSocial:FC<SocialLinks> = ({hintText,displayText,linkText, action,cop
             action === 'copy' ? (
                 <CopyButton  value={linkText}>
                     {({copied,copy})=>(
-                        <Button style={style} title={hintText} onMouseUp={copy}>
+                        <Button bg={'var(--color-blue)'} style={style} title={hintText} onMouseUp={copy}>
                             {copied ? copiedTextDisplay : displayText }
                         </Button>
                     )}
                 </CopyButton>
-            ): <Button title={hintText} onMouseUp={()=>redirect(linkText)}>
+            ): <Button bg={'var(--color-blue)'} title={hintText} onMouseUp={()=>redirect(linkText)}>
                 {displayText}
             </Button>
         )

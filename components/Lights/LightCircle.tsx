@@ -1,12 +1,12 @@
 "use client"
-import {CSSProperties, FC} from "react";
+import {CSSProperties, FC, memo} from "react";
 import {LazyMotion, domAnimation, motion} from "motion/react";
 import {LightCircleProps} from "@/types/types";
 import {useViewportSize} from "@mantine/hooks";
 
 
 
-const LightCircle:FC<LightCircleProps> = ({w,h,c,opc,blur,z,...props}) => {
+const LightCircle:FC<LightCircleProps> = memo(({w,h,c,opc,blur,z,...props}) => {
     const {width} = useViewportSize();
 
     const style:CSSProperties = {
@@ -26,6 +26,6 @@ const LightCircle:FC<LightCircleProps> = ({w,h,c,opc,blur,z,...props}) => {
             <motion.div style={style}  {...props} />
         </LazyMotion>
     )
-}
+})
 
 export default LightCircle

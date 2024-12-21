@@ -34,7 +34,7 @@ const Header = () => {
     return (
 
         cssLoad && (
-            <Grid  bg="rgba(255,255,255,0)" columns={12} id="header" ref={scope} justify="start" align="center">
+            <Grid  bg="rgba(255,255,255,0)" columns={12} id="header" className={'noisy'} ref={scope} justify="start" align="center">
                 <Grid.Col visibleFrom="sm" span="content">
                     <Image style={{height: "4rem", marginLeft: 20, }} width={40} src={logotype} alt="logotype"/>
 
