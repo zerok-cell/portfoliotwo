@@ -32,7 +32,7 @@ const Github = () => {
     )
 }
 
-const WelcomeCenter =  () => {
+const Welcome_center =  () => {
     const [scope, animate]=useAnimateMini()
     const os = useOs()
     const dataOs:Record<OS, JSX.Element> = {
@@ -68,4 +68,4 @@ const WelcomeCenter =  () => {
     )
 }
 
-export default WelcomeCenter;
+export default Welcome_center;

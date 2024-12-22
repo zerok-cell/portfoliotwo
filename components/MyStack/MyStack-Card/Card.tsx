@@ -7,7 +7,7 @@ import * as m from "motion/react-m"
 import {StaticImport} from "next/dist/shared/lib/get-img-props";
 import {chakra} from "@/public/fonts";
 import {domAnimation, LazyMotion, useAnimate} from "motion/react";
-import {lazy, memo} from "react";
+import { memo} from "react";
 
 
 const CardMyStack = memo(({ data }: {data:ImagesTextData<StaticImport>}) => {
