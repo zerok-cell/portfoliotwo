@@ -1,5 +1,6 @@
-
-#header{
+@use 'styles/effects/noisy';
+.Header{
+  padding: 0 10px 0 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,21 +14,27 @@
   border-width: 0;
   border-bottom-width: 1rem;
 
-  a{
+  .Header-Anchor{
     transition: .2s ease all;
     color: white;
     text-decoration: none;
   }
-  .archer-link:hover{
+  .Header-Anchor:hover{
     font-size:18px;
 
   }
 
 
 
-  a, .icon{
+  .Header-Anchor, .Header-Icon{
     opacity: 0;
 
   }
 
+}
+.Header_noisy{
+@extend .noisy;
+}
+.Header-Logotype{
+  height: 4rem;
 }

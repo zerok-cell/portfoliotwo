@@ -1,0 +1,13 @@
+@use 'styles/effects/noisy';
+
+.Footer {
+  background: var(--darks-color);
+  width: 100%;
+  border-top: 1px solid gray;
+  box-shadow: 0 100px 200px rgba(255, 255, 255, 0.30);
+}
+.Footer_noisy{
+  @extend .noisy
+}
+
+@media (max-width: 600px) { #custom-footer  { height: 7rem; } }

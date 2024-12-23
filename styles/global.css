@@ -22,10 +22,6 @@ body, html {
   height: max-content;
 }
 
-.noisy {
-  background-image: url("../public/img-noise-361x370.png") !important;
-}
-
 body {
   position: relative; /* Добавлено */
   scroll-behavior: smooth;

@@ -13,12 +13,12 @@ const HeaderAnchor: FC<AnchorProps> = ({ data }) => {
   return data.map((item, index) => (
     <Flex gap={5} key={index}>
       {width > table.xs && (
-        <ChildrenStyles className="Header_Icon" c="gray">
+        <ChildrenStyles className="Header-Icon" c="gray">
           {item.icon}
         </ChildrenStyles>
       )}
       <Link
-        className="Header_Anchor"
+        className="Header-Anchor"
         style={{ fontWeight: '500', textAlign: 'center' }}
         href={item.src}
       >

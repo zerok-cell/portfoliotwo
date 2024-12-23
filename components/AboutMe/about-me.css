@@ -1,0 +1,14 @@
+.noisy, .about-me_noisy {
+  background-image: url("../../public/img-noise-361x370.png") !important;
+}
+
+#about-me {
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding: 5px;
+  opacity: 0;
+  background: #090909;
+}
+
+/*# sourceMappingURL=about-me.css.map */
