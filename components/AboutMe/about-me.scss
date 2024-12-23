@@ -1,0 +1,14 @@
+@use "../../styles/effects/noisy";
+
+.about-me_noisy{
+  @extend .noisy
+}
+
+#about-me{
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding:5px;
+  opacity: 0;
+  background:#090909;
+}

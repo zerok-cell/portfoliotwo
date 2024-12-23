@@ -1,6 +1,7 @@
-import {cloneElement, CSSProperties, memo, ReactElement, ReactNode} from "react";
+import {cloneElement, CSSProperties, HTMLAttributes, memo, ReactElement, ReactNode} from "react";
+import {IconProps} from "@tabler/icons-react";
 
-interface PropsRezie{
+interface PropsRezie extends HTMLAttributes<IconProps>{
     children: ReactElement;
     w?: CSSProperties['width'];
     h?: CSSProperties['height']
@@ -10,11 +11,13 @@ interface PropsRezie{
     p?:CSSProperties['padding'];
     rounded?:CSSProperties['borderRadius'];
     c?:CSSProperties['color'];
+
+
 }
 type ChildrenStylesType = (props:PropsRezie)=>ReactNode
 
 const ChildrenStyles: ChildrenStylesType  = memo(
-    ({children, w,h,scale,style,bg,p,rounded,c}:PropsRezie) => {
+    ({children, w,h,scale,style,bg,p,rounded,c,...iconProps}:PropsRezie) => {
         const styleFromChildren:CSSProperties = {
             width: w||"auto",
             height: h|| 'auto',
@@ -30,7 +33,9 @@ const ChildrenStyles: ChildrenStylesType  = memo(
         const styledChild =  cloneElement(children,{
             style:{
                 ...styleFromChildren
-            }
+
+            },
+                ...iconProps
         })
         return (
             <div style={{

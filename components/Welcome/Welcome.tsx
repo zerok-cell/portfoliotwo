@@ -1,13 +1,12 @@
 'use client'
-import Welcome_center from "@/components/Welcome/__Center/Welcome_center";
+import WelcomeCenter from "@/components/Welcome/Welcome-Center/Welcome-Center";
 import {Center, Grid} from "@mantine/core";
 import LightCircle from "@/components/Lights/LightCircle";
 import AboutMe from "@/components/AboutMe/AboutMe";
-import {lazy, memo} from "react";
+import { memo} from "react";
 
-const Abme = lazy(()=>import('@/components/AboutMe/AboutMe'))
 
-const WelcomeMain = memo(() => {
+const Welcome = memo(() => {
 
 
     return (
@@ -18,11 +17,11 @@ const WelcomeMain = memo(() => {
                     }} initial={{opacity:0}} transition={{duration:2}}    />
                 </Grid.Col>
                 <Grid.Col span={12}>
-                    <Welcome_center/>
+                    <WelcomeCenter/>
                 </Grid.Col>
                 <Grid.Col  span={12}>
 
-                    <Center> <Abme/> </Center>
+                    <Center> <AboutMe/> </Center>
 
                 </Grid.Col>
 
@@ -34,4 +33,4 @@ const WelcomeMain = memo(() => {
     )
 })
 
-export default WelcomeMain
+export default Welcome

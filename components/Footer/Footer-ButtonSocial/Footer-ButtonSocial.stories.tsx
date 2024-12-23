@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import ButtonSocial from './ButtonSocial'
+import FooterButtonSocial from './Footer-ButtonSocial'
 import {IconBrandTelegram} from "@tabler/icons-react";
 const meta = {
-    component: ButtonSocial,
+    component: FooterButtonSocial,
     argTypes: { hintText: { control: 'text', description: 'Подсказка для кнопки', }, linkText: { control: 'text', description: 'URL для перенаправления', }, action: { control: 'select', options: ['copy', 'redirect'], description: 'Действие при клике', }, copiedTextDisplay: { control: 'text', description: 'Текст для отображения при копировании', }, displayText: { control: 'text', description: 'Текст или ReactNode для отображения', }, },
-} satisfies Meta<typeof ButtonSocial>;
+} satisfies Meta<typeof FooterButtonSocial>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

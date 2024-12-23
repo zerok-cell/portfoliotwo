@@ -3,7 +3,7 @@ import {Button, CopyButton} from "@mantine/core";
 import {redirect} from "next/navigation";
 import SocialLinks from "@/components/Footer/types";
 
-const ButtonSocial:FC<SocialLinks> = ({hintText,displayText,linkText, action,copiedTextDisplay, })=>{
+const FooterButtonSocial:FC<SocialLinks> = ({hintText,displayText,linkText, action,copiedTextDisplay })=>{
     const style:CSSProperties = {
         width:"max-content"
     }
@@ -19,7 +19,7 @@ const ButtonSocial:FC<SocialLinks> = ({hintText,displayText,linkText, action,cop
                     </Button>
                 )}
             </CopyButton>
-        ): <Button bg={colorButton} title={hintText} onMouseUp={()=>redirect(linkText)}>
+        ): <Button  bg={colorButton} title={hintText} onMouseUp={()=>redirect(linkText as string)}>
             {displayText}
         </Button>
     )
@@ -27,4 +27,4 @@ const ButtonSocial:FC<SocialLinks> = ({hintText,displayText,linkText, action,cop
 }
 
 
-export default ButtonSocial;
+export default FooterButtonSocial;

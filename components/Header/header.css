@@ -1,27 +1,17 @@
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 23;
-  height: 4rem;
-  transition: 1s ease all;
-  width: 100%;
-  border-bottom: rgba(255, 255, 255, 0.22) solid;
-  border-width: 0;
-  border-bottom-width: 1rem;
-}
-#header a {
-  transition: 0.2s ease all;
-  color: white;
-  text-decoration: none;
-}
-#header .archer-link:hover {
-  font-size: 18px;
-}
-#header a, #header .icon {
-  opacity: 0;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use 'styles/effects/noisy';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   header.scss 1:1  root stylesheet */
 
-/*# sourceMappingURL=header.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use 'styles/effects/noisy';\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   header.scss 1:1  root stylesheet";
+}
