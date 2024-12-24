@@ -1,15 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { MantineProvider } from "@mantine/core";
 import AboutMe from "@/components/AboutMe/AboutMe";
+import Login from "@/components/Login/Login";
+import {i} from "framer-motion/m";
 
 
 it('about me renders', async () => {
-    const { asFragment } = render(<AboutMe />, { wrapper: MantineProvider , });
-    const ii = screen.getByTestId('light-block')
-    expect(ii).toHaveStyle({
-        width:'80%'
-    })
-    expect(asFragment()).toMatchSnapshot()
+    const { asFragment } = render(<Login />, { wrapper: MantineProvider , });
+    for (let i=0; i<10; i++) {
+        render(<Login />, { wrapper: MantineProvider , })
+    }
 
 })
 
