@@ -38,7 +38,7 @@ body::before {
   bottom: 0;
   background-position: top;
   z-index: 1; /* Убедитесь, что z-index меньше */
-  background-image: url("../public/img-noise-361x370.png") !important;
+  background-image: url("../../public/img-noise-361x370.png") !important;
 }
 
 main {

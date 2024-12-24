@@ -2,8 +2,8 @@ import '@mantine/core/styles.css';
 
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
-import { theme } from '../theme';
-import {chakra} from "@/public/fonts";
+import { theme } from '../../theme';
+import {chakra} from "~/public/fonts";
 // import "./global.scss"
 export const metadata = {
   title: 'Shakhsinov Murad',
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: any }) {
       <head>
           <ColorSchemeScript />
 
-        <link rel="shortcut icon" href='../public/logotype.svg' />
+        <link rel="shortcut icon" href='../../public/logotype.svg' />
 
       </head>
       <body className={`${chakra.className}`}>

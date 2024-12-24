@@ -1,6 +1,6 @@
 import {DataProvider, GetListParams, GetListResult, GetOneParams, GetOneResult} from "react-admin";
 import axios from "axios";
-import {BlogType} from "@/types/prismaTypes";
+import {BlogType} from "@/src/types/prismaTypes";
 
 const neondbProvider:DataProvider = {
     getList: async (res: string, params:GetListParams): Promise<GetListResult> =>{

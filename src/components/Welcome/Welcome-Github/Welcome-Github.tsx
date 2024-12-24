@@ -1,6 +1,6 @@
 import {Button, Flex} from "@mantine/core";
 import Image from "next/image";
-import avatar from "@/public/avatar_zerok.webp";
+import avatar from "~/public/avatar_zerok.webp";
 import {redirect} from "next/navigation";
 import {IconBrandGithub} from "@tabler/icons-react";
 

@@ -1,5 +1,5 @@
 import {createContext, FC} from "react";
-import {ErrorProviderContext, ErrorProviderProps} from "@/types/Providers/errorProvider";
+import {ErrorProviderContext, ErrorProviderProps} from "@/src/types/Providers/errorProvider";
 
 const Error = createContext<ErrorProviderContext>({error:false})
 

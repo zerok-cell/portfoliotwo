@@ -1,7 +1,7 @@
 import {CSSProperties, FC} from "react";
 import {Button, CopyButton} from "@mantine/core";
 import {redirect} from "next/navigation";
-import SocialLinks from "@/components/Footer/types";
+import SocialLinks from "@/src/components/Footer/types";
 
 const FooterButtonSocial:FC<SocialLinks> = ({hintText,displayText,linkText, action,copiedTextDisplay })=>{
     const style:CSSProperties = {

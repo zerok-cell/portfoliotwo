@@ -6,7 +6,7 @@ import {
   startTracking,
   stopTracking,
   updateTrackValue,
-} from '@/types/Providers/inputProvider';
+} from '@/src/types/Providers/inputProvider';
 
 export const InputControl = createContext<IdenificatorsInputProvider>({ inputField: {} });
 

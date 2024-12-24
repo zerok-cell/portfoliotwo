@@ -1,14 +1,14 @@
-import nextjs from "@/public/iconsStack/nextjs-icon.svg";
-import react from "@/public/iconsStack/react-js-icon.svg";
-import css from "@/public/iconsStack/css-icon.svg";
-import django from "@/public/iconsStack/django-icon.svg";
-import html from "@/public/iconsStack/html-icon.svg";
-import javascript from "@/public/iconsStack/javascript-programming-language-icon.svg";
-import python from "@/public/iconsStack/python-programming-language-icon.svg";
-import redux from "@/public/iconsStack/redux-icon.svg";
-import sass from "@/public/iconsStack/sass-icon.svg";
-import tailwind from "@/public/iconsStack/tailwind-css-icon.svg";
-import typescript from "@/public/iconsStack/typescript-programming-language-icon.svg";
+import nextjs from "~/public/iconsStack/nextjs-icon.svg";
+import react from "~/public/iconsStack/react-js-icon.svg";
+import css from "~/public/iconsStack/css-icon.svg";
+import django from "~/public/iconsStack/django-icon.svg";
+import html from "~/public/iconsStack/html-icon.svg";
+import javascript from "~/public/iconsStack/javascript-programming-language-icon.svg";
+import python from "~/public/iconsStack/python-programming-language-icon.svg";
+import redux from "~/public/iconsStack/redux-icon.svg";
+import sass from "~/public/iconsStack/sass-icon.svg";
+import tailwind from "~/public/iconsStack/tailwind-css-icon.svg";
+import typescript from "~/public/iconsStack/typescript-programming-language-icon.svg";
 
 import { ImagesTextData } from "@/components/MyStack/types.mystack";
 import {StaticImport} from "next/dist/shared/lib/get-img-props";

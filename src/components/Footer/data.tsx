@@ -1,4 +1,4 @@
-import SocialLinks from "@/components/Footer/types";
+import SocialLinks from "@/src/components/Footer/types";
 import {IconBrandTelegram, IconMail, IconPhone} from "@tabler/icons-react";
 import {Text} from "@mantine/core"
 

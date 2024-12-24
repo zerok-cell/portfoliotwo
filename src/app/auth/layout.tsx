@@ -1,6 +1,6 @@
 import {ColorSchemeScript, mantineHtmlProps, MantineProvider} from "@mantine/core";
-import {chakra} from "@/public/fonts";
-import {theme} from "@/theme";
+import {chakra} from "~/public/fonts";
+import {theme} from "~/theme";
 import React from "react";
 import('@/styles/global.scss').then()
 

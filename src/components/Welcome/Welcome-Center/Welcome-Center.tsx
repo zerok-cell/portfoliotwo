@@ -1,7 +1,7 @@
 'use client'
-import "@/public/buttons.scss"
+import "~/public/buttons.scss"
 import { Button, Flex, Text, Title} from "@mantine/core";
-import {chakra} from "@/public/fonts";
+import {chakra} from "~/public/fonts";
 
 import {useAnimateMini} from "motion/react";
 import { useEffect} from "react";

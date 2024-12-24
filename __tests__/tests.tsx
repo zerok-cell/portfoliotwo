@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MantineProvider } from "@mantine/core";
-import AboutMe from "@/components/AboutMe/AboutMe";
-import Login from "@/components/Login/Login";
+import AboutMe from "@/src/components/AboutMe/AboutMe";
+import Login from "@/src/components/Login/Login";
 import {i} from "framer-motion/m";
 
 

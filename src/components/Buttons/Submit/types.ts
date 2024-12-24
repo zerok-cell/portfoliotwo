@@ -5,3 +5,4 @@ export interface SubmitProps extends  PolymorphicComponentProps<'button', Button
     insideText:string
 
 }
+

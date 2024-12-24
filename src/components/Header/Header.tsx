@@ -4,7 +4,7 @@ import {Flex, Grid} from "@mantine/core";
 import {useEffect, useState} from "react";
 import Image from "next/image"
 import {useAnimate} from "motion/react";
-import logotype from "@/public/logotype.svg"
+import logotype from "~/public/logotype.svg"
 import HeaderAnchor from "@/components/Header/Header-AnchorLinks/Header-Anchor";
 import data from "@/components/Header/data";
 

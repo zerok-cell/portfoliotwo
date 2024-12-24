@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import {NextApiRequest} from "next";
-import {BlogType} from "@/types/prismaTypes";
+import {BlogType} from "@/src/types/prismaTypes";
 
 export const prismaClient = new PrismaClient()
 

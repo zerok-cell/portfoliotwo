@@ -1,6 +1,6 @@
 'use client'
 import {Flex, Text, } from "@mantine/core";
-import logotype from "@/public/logotype.svg"
+import logotype from "~/public/logotype.svg"
 import Image from "next/image";
 import { useViewportSize} from "@mantine/hooks";
 import adaptiveTable from "@/components/adaptiveTable";

@@ -1,9 +1,11 @@
 import { ReactFormExtendedApi } from '@tanstack/react-form';
-import {z} from 'zod';
+import {z, ZodString} from 'zod';
 
 export const InputValidator = z
   .object({
-    name: z.string().nonempty('The field is empty'),
+    name: z
+        .string()
+        .nonempty('The field is empty'),
     password: z
       .string()
       .regex(/^\S*$/, 'The string must not contain spaces')
@@ -13,8 +15,6 @@ export const InputValidator = z
 
 
 
-export interface LoginProps {
-}
 
 
 const inputTypes = [
@@ -43,7 +43,10 @@ const inputTypes = [
 ] as const;
 
 // type KeysInputValidator = keyof InputValidator
-export const LoginPropsZod= z.object({
+export const InputPropsMantine= z.object({
+  /**
+   * dwad
+   */
   lb: z.string().nonempty().optional(),
   ds: z.string().nonempty().optional(),
   pl: z.string().nonempty().optional(),
@@ -52,13 +55,12 @@ export const LoginPropsZod= z.object({
 });
 
 
-export type LoginPropsZodTypeLocal = z.infer<typeof LoginPropsZod>;
+// <T extends {[key:string]:string}>
 
-
-export type LoginPropsZodType<T extends {[key:string]:string}> =  {
-  form: ReactFormExtendedApi<InputValidatorType>;
+export type LoginPropsZodType<T> =  {
+  form: ReactFormExtendedApi<T>;
   nameField: keyof T,
-}& LoginPropsZodTypeLocal;
+}& z.infer<typeof InputPropsMantine>;
 
 
 export type InputValidatorType = z.infer<typeof InputValidator>;

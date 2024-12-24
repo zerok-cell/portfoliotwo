@@ -4,7 +4,7 @@
 import dataStack from "@/components/MyStack/data.stack";
 // import CardMyStack from "@/components/MyStack/MyStack.card";
 import {Flex, Title} from "@mantine/core";
-import {chakra} from "@/public/fonts";
+import {chakra} from "~/public/fonts";
 import {IconStack2} from "@tabler/icons-react";
 import {lazy, Suspense, } from "react";
 const LazyCard = lazy(()=>import('@/components/MyStack/MyStack-Card/Card'))

@@ -1,12 +1,8 @@
 import { Input } from '@mantine/core';
-import {
-  InputValidatorType,
-  LoginProps,
-  LoginPropsZod,
-  LoginPropsZodType,
-} from '@/types/zodTypes/inputValidator';
+import { InputPropsMantine, LoginPropsZodType } from '@/types/zodTypes/inputValidator';
+import {FieldApi, FormApi} from "@tanstack/form-core";
 
-const LoginField = ({
+export function LoginField<T extends Record<keyof T, string>>({
   form,
   lb,
   pl,
@@ -14,22 +10,24 @@ const LoginField = ({
   tp,
   nameField,
   er,
-}: LoginProps & LoginPropsZodType<InputValidatorType>) => {
+}: LoginPropsZodType<T>) {
   /**
    * `Render` field with use mantine and tanstack form `form.Field`.
    * `lb`: label
    * `pl`: placeholder
    * `ds`:description
    * `tp`: `HTML` type input field, example `text`,`password`,`tel`,and other
-   * `name`: name from props in form.Field. Required argument
+   * `nameField`: name from props in form.Field. Required argument
    * `er`: use from summon error for alls fields.
    */
 
-  const validateProps = LoginPropsZod.parse({ lb, pl, ds, tp, er });
+  const validateProps = InputPropsMantine.parse({ lb, pl, ds, tp, er });
 
   return (
-    <form.Field name={nameField}>
-      {(field) => (
+    <form.Field name={nameField}
+
+    >
+      {(field:FieldApi<T, >) => (
         <Input.Wrapper
           error={
             form.fieldInfo[nameField]?.instance?.getMeta().isDirty &&
@@ -53,5 +51,5 @@ const LoginField = ({
       )}
     </form.Field>
   );
-};
+}
 export default LoginField;

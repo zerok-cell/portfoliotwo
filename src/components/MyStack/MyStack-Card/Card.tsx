@@ -3,7 +3,7 @@
 import { ImagesTextData } from "@/components/MyStack/types.mystack";
 import {Card, Text, Title} from "@mantine/core";
 import {StaticImport} from "next/dist/shared/lib/get-img-props";
-import {chakra} from "@/public/fonts";
+import {chakra} from "~/public/fonts";
 import { memo} from "react";
 import MyStackPhoto from "@/components/MyStack/MyStack-Photo/MyStack-Photo";
 
