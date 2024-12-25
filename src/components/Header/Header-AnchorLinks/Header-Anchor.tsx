@@ -3,16 +3,18 @@ import Link from "next/link";
 import { Flex } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 import table from "@/components/adaptiveTable";
-import {AnchorProps} from "@/components/Header/types";
+import {AnchorPropsType} from "@/types/zodTypes/headerType";
 import ChildrenStyles from "@/components/utils/ChildrenStyles";
 
 
-const HeaderAnchor: FC<AnchorProps> = ({ data }) => {
+const HeaderAnchor: FC<AnchorPropsType> = ({ data }) => {
   const { width } = useViewportSize();
+
 
   return data.map((item, index) => (
     <Flex gap={5} key={index}>
-      {width > table.xs && (
+        {
+          width > table.xs && (
         <ChildrenStyles className="Header-Icon" c="gray">
           {item.icon}
         </ChildrenStyles>

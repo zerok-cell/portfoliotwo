@@ -1,1 +1,1 @@
-export * from "./light_types"
+export * from "./zodTypes/light_types"

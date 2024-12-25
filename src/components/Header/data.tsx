@@ -1,5 +1,5 @@
 import {IconAddressBook, IconStack2, IconStar} from "@tabler/icons-react";
-import LinkProps from "@/src/components/Header/types";
+import LinkProps from "@/components/Header/types";
 
 const data:LinkProps[] = [
     {src:'#about-me', icon:<IconStar  className="icon"/>, text:"About me"},

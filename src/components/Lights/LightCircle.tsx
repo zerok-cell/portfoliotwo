@@ -1,17 +1,17 @@
 "use client"
 import {CSSProperties, FC, memo} from "react";
 import {LazyMotion, domAnimation, motion} from "motion/react";
-import {LightCircleProps} from "@/types/types";
+import {LightCircleProps, LightCircleSchema} from "@/types/zodTypes/light_types";
 import {useViewportSize} from "@mantine/hooks";
 
 
 
-const LightCircle:FC<LightCircleProps> = memo(({w,h,c,opc,blur,z,...props}) => {
+const LightCircle:FC<LightCircleProps> = memo(({w='max',h=100,c='white',opc=.5,blur='0.5',z=-1,...props}) => {
     const {width} = useViewportSize();
-
+    LightCircleSchema.parse({w,h,c,opc,blur,z})
     const style:CSSProperties = {
-        width:w==='max'? '100%': w ||'100px',
-        height:h||'100px',
+        width:w === 'max'? '100%': w ||100,
+        height:h,
         userSelect:"none",
         opacity: opc || 0.5,
         background:c||"white",

@@ -1,9 +1,13 @@
-import {Icon, IconProps} from "@tabler/icons-react";
-import * as react from "react";
+import {ReactElement} from "react";
 
-interface DataProps {
-    icon:react.ForwardRefExoticComponent<IconProps & react.RefAttributes<Icon>>,
-    text:string,
+
+
+export interface DataPropsElement  {
+    icon:ReactElement,
+    text: string,
 }
 
-export default DataProps;
+
+
+
+

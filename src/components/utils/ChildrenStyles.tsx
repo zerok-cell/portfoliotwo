@@ -1,5 +1,6 @@
-import {cloneElement, CSSProperties, HTMLAttributes, memo, ReactElement, ReactNode} from "react";
+import {cloneElement, CSSProperties, FC, HTMLAttributes, memo, ReactElement, ReactNode} from "react";
 import {IconProps} from "@tabler/icons-react";
+import {PropsStyleChildren, PropsStyleChildrenSchema} from "@/types/zodTypes/childrenStyleType";
 
 interface PropsRezie extends HTMLAttributes<IconProps>{
     children: ReactElement;
@@ -14,10 +15,12 @@ interface PropsRezie extends HTMLAttributes<IconProps>{
 
 
 }
-type ChildrenStylesType = (props:PropsRezie)=>ReactNode
 
-const ChildrenStyles: ChildrenStylesType  = memo(
-    ({children, w,h,scale,style,bg,p,rounded,c,...iconProps}:PropsRezie) => {
+
+const ChildrenStyles: FC<PropsStyleChildren>  = memo(
+    ({children, w,h,scale,style,bg,p,rounded,c,...iconProps}) => {
+
+        PropsStyleChildrenSchema.parse({w,h,scale,bg,p,rounded,c})
         const styleFromChildren:CSSProperties = {
             width: w||"auto",
             height: h|| 'auto',
