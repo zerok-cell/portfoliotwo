@@ -1,10 +1,8 @@
-import {z} from 'zod';
+import { z } from 'zod';
 
-export const InputValidatorTypes = z
+export const InputValidatorSchema = z
   .object({
-    name: z
-        .string()
-        .nonempty('The field is empty'),
+    name: z.string().nonempty('The field is empty'),
     password: z
       .string()
       .regex(/^\S*$/, 'The string must not contain spaces')
@@ -12,9 +10,10 @@ export const InputValidatorTypes = z
   })
   .strict();
 
-
-
-
+export const InputCreateAdminSchema = z.object({
+  title:z.string().nonempty().min(1),
+  content:z.string().nonempty().min(10),
+})
 
 const inputTypes = [
   'button',
@@ -41,8 +40,9 @@ const inputTypes = [
   'week',
 ] as const;
 
-// type KeysInputValidator = keyof InputValidatorTypes
-export const InputPropsScheme= z.object({
+
+
+export const InputPropsScheme = z.object({
   /**
    * Schema from validation input field.
    */
@@ -51,17 +51,14 @@ export const InputPropsScheme= z.object({
   pl: z.string().nonempty().optional(),
   tp: z.enum(inputTypes),
   er: z.string().optional(),
-
 });
 
+export type FieldsLogin = Record<string, any>;
 
-export type FieldsLogin = Record<string, any>
-
-export type LoginPropsZodType<TFields extends FieldsLogin> =  {
+export type LoginPropsZodType<TFields extends FieldsLogin> = {
   form: any;
-  nameField: keyof TFields,
-}& z.infer<typeof InputPropsScheme>;
+  nameField: keyof TFields;
+} & z.infer<typeof InputPropsScheme>;
 
-
-
-export type InputValidatorType = z.infer<typeof InputValidatorTypes>;
+export type InputCreateAdminType = z.infer<typeof InputCreateAdminSchema>;
+export type InputValidatorType = z.infer<typeof InputValidatorSchema>;

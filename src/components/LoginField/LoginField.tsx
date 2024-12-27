@@ -3,7 +3,7 @@ import {
   FieldsLogin,
   InputPropsScheme,
   LoginPropsZodType,
-} from '@/types/zodTypes/inputValidator.types';
+} from '@/types/zodTypes/inputValidatorSchema';
 
 export function LoginField<T extends FieldsLogin>({
   form,

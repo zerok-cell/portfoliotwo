@@ -8,8 +8,8 @@ import axios from 'axios';
 import { useNotify, useRedirect } from 'react-admin';
 import { Flex, Title } from '@mantine/core';
 import SubmitButton from '@/components/Buttons/Submit/SubmitButton';
-import LoginField from '@/components/Login/Login-Field/Login-Field';
-import { InputValidatorType, InputValidatorTypes } from '@/types/zodTypes/inputValidator.types';
+import LoginField from '@/components/LoginField/LoginField';
+import { InputValidatorType, InputValidatorSchema } from '@/types/zodTypes/inputValidatorSchema';
 import { chakra } from '~/public/fonts';
 
 const Login = () => {
@@ -23,7 +23,7 @@ const Login = () => {
       password: '',
     },
     validators: {
-      onSubmit: InputValidatorTypes,
+      onSubmit: InputValidatorSchema,
     },
   });
 

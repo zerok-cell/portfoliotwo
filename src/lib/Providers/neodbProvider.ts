@@ -12,7 +12,7 @@ import {
 } from 'react-admin';
 import { BlogInputSchema, BlogInputType, BlogType } from '@/types/prismaTypes';
 
-const neondbProvider: DataProvider = {
+const neonProvider: DataProvider = {
   getList: async (res: string, params: GetListParams): Promise<GetListResult> => {
     const data = await axios.get<{ data: BlogType[] }>('/api/posts/get_all/', {
       ...params,
@@ -43,6 +43,9 @@ const neondbProvider: DataProvider = {
     );
     return { data };
   },
-  create: async (res: string, params: CreateParams): Promise<CreateResult> => {},
+  create: async (res: string, params: CreateParams): Promise<CreateResult> => {
+      console.log(params)
+
+  },
 };
-export default neondbProvider;
+export default neonProvider;
