@@ -1,52 +1,48 @@
 import axios from 'axios';
 import {
-    DataProvider,
-    GetListParams,
-    GetListResult,
-    GetOneParams,
-    GetOneResult,
-    UpdateParams, UpdateResult,
+  CreateParams,
+  CreateResult,
+  DataProvider,
+  GetListParams,
+  GetListResult,
+  GetOneParams,
+  GetOneResult,
+  UpdateParams,
+  UpdateResult,
 } from 'react-admin';
-import {BlogInputSchema, BlogInputType, BlogType} from '@/types/prismaTypes';
-import {Prisma} from "@prisma/client";
+import { BlogInputSchema, BlogInputType, BlogType } from '@/types/prismaTypes';
 
 const neondbProvider: DataProvider = {
   getList: async (res: string, params: GetListParams): Promise<GetListResult> => {
     const data = await axios.get<{ data: BlogType[] }>('/api/posts/get_all/', {
       ...params,
     });
-    const resultFromReturn: GetListResult = {
+
+    return {
       data: data.data.data,
       total: data.data.data.length,
       ...params,
     };
-    return resultFromReturn;
   },
   getOne: async (res: string, params: GetOneParams): Promise<GetOneResult> => {
-    const data = await axios.get<{ data: BlogType[] }>('/api/posts/get_one/', {
-      params: {
-        ...params,
-      },
-    });
-    return {
-      data: data.data.data[0],
-      ...params,
+    const { data } = await axios.get<BlogType>('/api/posts/get_one/', { params });
+    return { data: data[0], ...params };
+  },
+  update: async (res: string, par: UpdateParams<BlogInputType>): Promise<UpdateResult> => {
+    const { content, id, title } = BlogInputSchema.parse(par.data);
+    const params: BlogInputType = {
+      id: Number(id),
+      content,
+      title,
     };
+
+    const { data } = await axios.put(
+      '/api/posts/update/',
+      { params },
+      { headers: { 'Content-Type': 'application/json' } }
+    );
+    return { data };
   },
-  update: async (res: string, params: UpdateParams):Promise<UpdateResult> => {
-        const objFromUpdate:BlogInputType = {
-            id:Number(params.data.id),
-            content:params.data.content,
-            title:params.data.title
-        }
-
-        BlogInputSchema.parse(objFromUpdate)
-
-        const x = await axios.put('/api/posts/update/', {objFromUpdate},{headers:{'Content-Type':'application/json'}})
-      // const updatePromise = await updateBlog(params.id, objFromUpdate)
-      console.log(x)
-
-    return {data:{...x.data}}
-  },
+  create: async (res: string, params: CreateParams): Promise<CreateResult> => {},
 };
 export default neondbProvider;

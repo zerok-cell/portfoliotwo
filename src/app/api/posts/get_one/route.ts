@@ -11,7 +11,7 @@ interface ResponseData{
 export async function GET(req:NextApiRequest, res: NextApiResponse<ResponseData>){
     try{
         const data =  await getOneBlogById(2)
-        return NextResponse.json({ data }, { status: 200 });
+        return NextResponse.json(data, { status: 200 });
     } catch {
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
 
