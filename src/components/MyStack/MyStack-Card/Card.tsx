@@ -1,25 +1,29 @@
-'use client'
+'use client';
 
-import { ImagesTextData } from "@/components/MyStack/types.mystack";
-import {Card, Text, Title} from "@mantine/core";
-import {StaticImport} from "next/dist/shared/lib/get-img-props";
-import {chakra} from "~/public/fonts";
-import { memo} from "react";
-import MyStackPhoto from "@/components/MyStack/MyStack-Photo/MyStack-Photo";
+import { memo } from 'react';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import { Card, Text, Title } from '@mantine/core';
+import MyStackPhoto from '@/components/MyStack/MyStack-Photo/MyStack-Photo';
+import { ImagesTextDataType, ImagesTextDatSchema } from '@/types/zodTypes/types.mystack';
+import { chakra } from '~/public/fonts';
 
+import '@/styles/card-glare.scss';
 
-const CardMyStack = memo(({ data }: {data:ImagesTextData<StaticImport>}) => {
-
-
+const CardMyStack = memo(
+  ({ text, imageIcon, description, alt }: ImagesTextDataType<StaticImport>) => {
+    ImagesTextDatSchema.parse({ text, description, alt });
     return (
-        <Card className="light-block noisy" style={{border:"1px solid gray", overflow:'clip'}} p={30} h={400} w={300} bg="#090909">
-                <MyStackPhoto  data={data}/>
-            <Title className={`${chakra.className}`}><span style={{color:"var(--color-blue)"}}>{data.text?.slice(0,1)}</span>{data.text?.slice(1)}
-                <hr />
-            </Title>
-            <Text>{data.description}</Text>
-        </Card>
+      <Card className="MyStack-Card MyStack-Card_noisy">
+        <MyStackPhoto imageIcon={imageIcon} alt={alt} />
+        <Title className={`${chakra.className}`}>
+          <span style={{ color: 'var(--color-blue)' }}>{text?.slice(0, 1)}</span>
+          {text?.slice(1)}
+          <hr />
+        </Title>
+        <Text>{description}</Text>
+      </Card>
     );
-})
+  }
+);
 
 export default CardMyStack;

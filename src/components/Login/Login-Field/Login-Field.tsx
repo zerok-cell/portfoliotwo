@@ -1,8 +1,9 @@
-import { FocusEventHandler } from 'react';
-
 import { Input } from '@mantine/core';
-import { FieldsLogin, InputPropsScheme, LoginPropsZodType } from '@/types/zodTypes/inputValidator';
-import {chakra} from "~/public/fonts";
+import {
+  FieldsLogin,
+  InputPropsScheme,
+  LoginPropsZodType,
+} from '@/types/zodTypes/inputValidator.types';
 
 export function LoginField<T extends FieldsLogin>({
   form,
@@ -28,19 +29,15 @@ export function LoginField<T extends FieldsLogin>({
 
   return (
     <form.Field name={nameField}>
-      {(field:typeof form) => (
+      {(field: typeof form) => (
         <Input.Wrapper
-
-          error={
-            form.fieldInfo[nameField]?.instance?.getMeta().errors?.join('. ')
-          }
+          error={form.fieldInfo[nameField]?.instance?.getMeta().errors?.join('. ')}
           w="100%"
           onBlur={field.handleBlur}
           label={validateProps.lb}
           description={validateProps.ds}
         >
           <Input
-
             error={validateProps.er}
             type={validateProps.tp}
             onChange={(e) => {

@@ -1,37 +1,29 @@
-:root{
+:root {
   --color-blue: #802bff;
   --color-blue-pastel: #b683ff;
-  --darks-color:#090909;
+  --darks-color: #090909;
   --border-base: 1px solid grey;
-  --border-success: 1px solid #80ff76
+  --border-success: 1px solid #80ff76;
 }
 
-
-
-
-.light-block{
-
-  box-shadow:  1px -33px 50rem rgba(128, 128, 128, 0.1);
-
+.light-block {
+  box-shadow: 1px -33px 50rem rgba(128, 128, 128, 0.1);
 }
-footer{
+footer {
   position: relative;
   bottom: 0;
-z-index: 30 !important;
+  z-index: 30 !important;
 }
 
-body,html{
+body,
+html {
   scroll-behavior: smooth;
   background-color: black !important;
   overflow-x: clip;
   height: max-content;
 }
 
-
-
-
 body {
-
   position: relative; /* Добавлено */
 
   scroll-behavior: smooth;
@@ -39,12 +31,9 @@ body {
   background-color: black !important;
 
   overflow-x: clip;
-
 }
 
-
 body::before {
-
   content: '';
 
   position: absolute;
@@ -61,10 +50,8 @@ body::before {
 
   z-index: 1; /* Убедитесь, что z-index меньше */
 
-  background-image: url("../../public/img-noise-361x370.png") !important;
-
+  background-image: url('../../public/img-noise-361x370.png') !important;
 }
-
 
 main {
   position: relative;
@@ -72,5 +59,4 @@ main {
   z-index: 12; /* Убедитесь, что z-index больше */
 
   filter: brightness(1);
-
 }

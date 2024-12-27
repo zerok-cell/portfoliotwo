@@ -2,9 +2,9 @@
 :root {
   --color-blue: #802bff;
   --color-blue-pastel: #b683ff;
-  --darks-color:#090909;
+  --darks-color: #090909;
   --border-base: 1px solid grey;
-  --border-success: 1px solid #80ff76 ;
+  --border-success: 1px solid #80ff76;
 }
 
 .light-block {
@@ -17,7 +17,8 @@ footer {
   z-index: 30 !important;
 }
 
-body, html {
+body,
+html {
   scroll-behavior: smooth;
   background-color: black !important;
   overflow-x: clip;

@@ -1,13 +1,6 @@
-import {ReactElement} from "react";
+import { ReactElement } from 'react';
 
-
-
-export interface DataPropsElement  {
-    icon:ReactElement,
-    text: string,
+export interface DataPropsElement {
+  icon: ReactElement;
+  text: string;
 }
-
-
-
-
-

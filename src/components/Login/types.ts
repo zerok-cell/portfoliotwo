@@ -1,4 +1,4 @@
-import {ChangeEvent} from "react";
+import { ChangeEvent } from 'react';
 
 interface FieldProps {
   label?: string;
@@ -8,9 +8,7 @@ interface FieldProps {
   id?: string;
   value?: string;
   onBlur?: () => void;
-  onChange?: (value: ChangeEvent<HTMLInputElement>) => void,
+  onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
 }
-
-
 
 export default FieldProps;

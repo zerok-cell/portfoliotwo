@@ -1,8 +1,6 @@
-import { ReactFormExtendedApi } from '@tanstack/react-form';
-import {z, ZodString} from 'zod';
-import type {Validator} from "@tanstack/form-core/src/types";
+import {z} from 'zod';
 
-export const InputValidator = z
+export const InputValidatorTypes = z
   .object({
     name: z
         .string()
@@ -43,7 +41,7 @@ const inputTypes = [
   'week',
 ] as const;
 
-// type KeysInputValidator = keyof InputValidator
+// type KeysInputValidator = keyof InputValidatorTypes
 export const InputPropsScheme= z.object({
   /**
    * Schema from validation input field.
@@ -53,6 +51,7 @@ export const InputPropsScheme= z.object({
   pl: z.string().nonempty().optional(),
   tp: z.enum(inputTypes),
   er: z.string().optional(),
+
 });
 
 
@@ -64,4 +63,5 @@ export type LoginPropsZodType<TFields extends FieldsLogin> =  {
 }& z.infer<typeof InputPropsScheme>;
 
 
-export type InputValidatorType = z.infer<typeof InputValidator>;
+
+export type InputValidatorType = z.infer<typeof InputValidatorTypes>;

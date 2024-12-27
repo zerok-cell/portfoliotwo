@@ -1,40 +1,30 @@
 @use 'src/styles/effects/noisy';
-.Header{
+.Header {
   padding: 0 10px 0 10px;
   position: fixed;
   top: 0;
-  left: 0;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 23;
   height: 4rem;
   transition: 1s ease all;
   width: 100%;
-  border-bottom: rgba(255, 255, 255, 0.22)  solid;
+  border-bottom: rgba(255, 255, 255, 0.22) solid;
   border-width: 0;
   border-bottom-width: 1rem;
 
-  .Header-Anchor{
-    transition: .2s ease all;
+  .Header-Anchor {
+    transition: 0.2s ease all;
     color: white;
     text-decoration: none;
   }
-  .Header-Anchor:hover{
-    font-size:18px;
-
+  .Header-Anchor:hover {
+    font-size: 18px;
   }
-
-
-
-  .Header-Anchor, .Header-Icon{
-    opacity: 0;
-
-  }
-
 }
-.Header_noisy{
-@extend .noisy;
+.Header_noisy {
+  @extend .noisy;
 }
-.Header-Logotype{
+.Header-Logotype {
   height: 4rem;
 }

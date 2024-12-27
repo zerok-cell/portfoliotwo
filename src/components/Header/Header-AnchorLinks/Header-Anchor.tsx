@@ -1,24 +1,22 @@
-import { FC } from "react";
-import Link from "next/link";
-import { Flex } from "@mantine/core";
-import { useViewportSize } from "@mantine/hooks";
-import table from "@/components/adaptiveTable";
-import {AnchorPropsType} from "@/types/zodTypes/headerType";
-import ChildrenStyles from "@/components/utils/ChildrenStyles";
+import { FC } from 'react';
+import Link from 'next/link';
+import { Flex } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
+import table from '@/components/adaptiveTable';
+import ChildrenStyles from '@/components/utils/ChildrenStyles';
+import { AnchorPropsSchema, AnchorPropsType } from '@/types/zodTypes/header.types';
 
-
-const HeaderAnchor: FC<AnchorPropsType> = ({ data }) => {
+const HeaderAnchor: FC<{ data: AnchorPropsType }> = ({ data }) => {
   const { width } = useViewportSize();
-
-
+  AnchorPropsSchema.parse(data);
   return data.map((item, index) => (
     <Flex gap={5} key={index}>
-        {
-          width > table.xs && (
+      {width > table.xs && (
         <ChildrenStyles className="Header-Icon" c="gray">
           {item.icon}
         </ChildrenStyles>
       )}
+
       <Link
         className="Header-Anchor"
         style={{ fontWeight: '500', textAlign: 'center' }}
@@ -29,4 +27,4 @@ const HeaderAnchor: FC<AnchorPropsType> = ({ data }) => {
     </Flex>
   ));
 };
-export default HeaderAnchor
+export default HeaderAnchor;

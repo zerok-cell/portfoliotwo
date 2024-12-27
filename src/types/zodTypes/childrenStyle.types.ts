@@ -1,7 +1,7 @@
 import { CSSProperties, HTMLAttributes, JSXElementConstructor, ReactElement } from 'react';
 import { IconProps } from '@tabler/icons-react';
 import { z } from 'zod';
-import { DecorativeStyle, SoftGeometricSchema } from '@/types/zodTypes/base';
+import { DecorativeStyle, SoftGeometricSchema } from '@/types/zodTypes/base.types';
 
 export const PropsStyleChildrenSchema = SoftGeometricSchema.extend({
   scale: z.number().or(z.string()).readonly().default(1).optional(),

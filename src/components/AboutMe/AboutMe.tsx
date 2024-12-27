@@ -8,11 +8,10 @@ import { DataPropsElement } from '@/components/AboutMe/types';
 import ChildrenStyles from '@/components/utils/ChildrenStyles';
 
 const AboutMe = memo(({ data }: { data: DataPropsElement[] }) => {
-
   return (
     <LazyMotion features={domAnimation}>
       <m.div
-        id="about-me "
+        id="about-me"
         style={{
           width: '80%',
           borderRadius: '5px',
@@ -34,7 +33,7 @@ const AboutMe = memo(({ data }: { data: DataPropsElement[] }) => {
             direction={{ base: 'column', xs: 'row', sm: 'row' }}
             align={{ base: 'center', sm: 'center' }}
           >
-            <ChildrenStyles  c="gray" p={5} rounded={5}>
+            <ChildrenStyles c="gray" p={5} rounded={5}>
               {item.icon}
             </ChildrenStyles>
             <Space w={{ base: '0', md: '20px', sm: '20px' }} />

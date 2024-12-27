@@ -1,0 +1,48 @@
+@use 'src/styles/effects/noisy';
+@use 'src/styles/global';
+
+
+@keyframes GlareTransform {
+  0% {
+    opacity: 0.1;
+    translate: -300px -300px;
+  }
+  50% {
+    translate: 1000px -300px;
+    filter: blur(30px);
+
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    translate: -300px -300px;
+  }
+}
+
+
+.MyStack-Card {
+  padding: 30px;
+  height: 400px;
+  width: 300px;
+  background-color: #090909;
+  border: 1px solid gray;
+  overflow: clip;
+  @extend .light-block;
+
+  &:before {
+    position: absolute;
+    filter: blur(20px);
+    content: '';
+    width: 10%;
+    translate: 300px -300px;
+    left: -200px;
+    opacity: 0.1;
+    rotate: 20deg;
+    height: 200%;
+    animation: GlareTransform infinite 7s ease-in;
+    background-color: white;
+  }
+}
+.MyStack-Card_noisy {
+  @extend .noisy;
+}
