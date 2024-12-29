@@ -13,6 +13,6 @@ export async function PUT(req: NextRequest) {
     await updateBlog(id, data);
     return NextResponse.json({ id, ...data }, { status: 200 });
   } catch (err) {
-    return NextResponse.json({ message: 'error' }, { status: 500 });
+    return NextResponse.json({ message: err }, { status: 500 });
   }
 }

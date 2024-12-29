@@ -5,6 +5,16 @@ import {
   LoginPropsZodType,
 } from '@/types/zodTypes/inputValidatorSchema';
 
+/**
+ * `Render` field with use mantine and tanstack form `form.Field`.
+ * `form`: result callback hook `useForm`
+ * `lb`: label
+ * `pl`: placeholder
+ * `ds`:description
+ * `tp`: `HTML` type input field, example `text`,`password`,`tel`,and other
+ * `nameField`: name from props in form.Field. Required argument
+ * `er`: use from summon error for alls fields.
+ */
 export function LoginField<T extends FieldsLogin>({
   form,
   lb,
@@ -14,17 +24,6 @@ export function LoginField<T extends FieldsLogin>({
   nameField,
   er,
 }: LoginPropsZodType<T>) {
-  /**
-   * `Render` field with use mantine and tanstack form `form.Field`.
-   * `form`: result callback hook `useForm`
-   * `lb`: label
-   * `pl`: placeholder
-   * `ds`:description
-   * `tp`: `HTML` type input field, example `text`,`password`,`tel`,and other
-   * `nameField`: name from props in form.Field. Required argument
-   * `er`: use from summon error for alls fields.
-   */
-
   const validateProps = InputPropsScheme.parse({ lb, pl, ds, tp, er });
 
   return (

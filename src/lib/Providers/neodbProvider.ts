@@ -25,7 +25,7 @@ const neonProvider: DataProvider = {
     };
   },
   getOne: async (res: string, params: GetOneParams): Promise<GetOneResult> => {
-    const { data } = await axios.get<BlogType>('/api/posts/get_one/', { params });
+    const { data } = await axios.get<BlogType>(`/api/posts/${params.id}`);
     return { data: data[0], ...params };
   },
   update: async (res: string, par: UpdateParams<BlogInputType>): Promise<UpdateResult> => {
@@ -44,8 +44,7 @@ const neonProvider: DataProvider = {
     return { data };
   },
   create: async (res: string, params: CreateParams): Promise<CreateResult> => {
-      console.log(params)
-
+    console.log(params);
   },
 };
 export default neonProvider;

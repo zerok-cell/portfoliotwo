@@ -2,11 +2,13 @@ import { Prisma, PrismaClient } from '@prisma/client';
 
 export const prismaClient = new PrismaClient();
 
-export async function createBlog(data:Prisma.BlogCreateInput) {
-  return  prismaClient.blog.create({
+export async function createBlog(data: Prisma.BlogCreateInput) {
+  const { content, title } = data;
+
+  return prismaClient.blog.create({
     data: {
-      content: data.content,
-      title: data.title,
+      content,
+      title,
     },
   });
 }
@@ -17,7 +19,7 @@ export async function selectAllBlogs() {
 
 export async function getOneBlogById(id: number) {
   return prismaClient.blog.findMany({
-    where: {id},
+    where: { id },
   });
 }
 
@@ -29,14 +31,9 @@ export async function deleteBlog(id: number) {
   });
 }
 
-export async function updateBlog(id:number,data:Prisma.BlogUpdateInput) {
-
-    return prismaClient.blog.update({
-        where: {id},
-        data
-
-    });
-
-
-
+export async function updateBlog(id: number, data: Prisma.BlogUpdateInput) {
+  return prismaClient.blog.update({
+    where: { id },
+    data,
+  });
 }
